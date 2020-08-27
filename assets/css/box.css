@@ -1,0 +1,116 @@
+#listbox
+{
+    height: auto; 
+    min-height: 600px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    left:19%;
+    top:10%;
+    background-color: white;
+    border-radius: 30px;
+    resize: vertical;
+    overflow: scroll;
+    background-image: url('./space.jpg');
+    background-size: cover;
+    
+    /* resize: horizontal;
+    overflow: scroll; */
+}
+
+#left,#right
+{
+    display:flex;
+    width: 30%;
+}
+#left
+{
+    height: 400px;
+    background-color: white;
+    position: relative;
+    left:2%;
+    top: 100px;
+    border-radius: 30px;
+    flex-direction: column;
+    background-color: rgb(81, 152, 57);
+}
+
+#textareaHeader
+{
+    text-align: center;
+    
+}
+#right
+{
+   
+    background-color: white;
+    position: relative;
+    left: 35%;
+    top:100px;
+    height:80px;
+    color: black;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(81, 152, 57);
+    border:2px solid black;
+    resize: horizontal;
+    
+}
+textarea
+{
+    background-color: rgb(81, 152, 57);
+    border:0px;
+    margin-top:15px;
+    height: 60px;
+}
+#button
+{
+    position: absolute;
+    top:40%;
+    left:75%;
+}
+
+#addEvent
+{
+    height:50px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: brown;
+}
+
+#addEvent:hover
+{
+    background-color: crimson;
+}
+
+#work,#others
+{
+    display: none;
+}
+#personal
+{
+    height: 100%;
+    width: 100%;
+    
+}
+
+#changeView
+{
+    position: absolute;
+    left:75%;
+    top:52%;
+
+}
+#changeView button
+{
+    height:50px;
+    width: 80px;
+    background-color:brown;
+}
+
+#changeView button:hover
+{
+    background-color: crimson;
+}
