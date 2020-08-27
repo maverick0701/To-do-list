@@ -11,7 +11,7 @@ const expressLayouts=require('express-ejs-layouts');
 app.use(expressLayouts);
 //extracting css ang script files
 app.set('layout extractStyles', true);
-app.set('layout extractScript', true);
+app.set('layout extractScripts', true);
 
 //set up view engine
 app.set('view engine','ejs');
