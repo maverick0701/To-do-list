@@ -48,7 +48,10 @@
     text-align: center;
     border-radius:10px ;
 }
-
+.close a
+{
+    color:#192b4d;
+}
 #textareaHeader
 {
     text-align: center;

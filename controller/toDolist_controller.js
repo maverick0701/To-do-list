@@ -34,3 +34,15 @@ module.exports.homePost=function(req,res)
         });
 
 }
+
+module.exports.deleteIt=function(req,res)
+{
+    let id = req.query.id;
+    DailyEvents.findByIdAndDelete(id, function(err){
+        if(err){
+            console.log('error in deleting the object');
+            return;
+        }
+        return res.redirect('back');
+    });
+}
