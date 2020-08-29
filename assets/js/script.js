@@ -37,6 +37,13 @@ next.click(function(e)
         next.removeAttr('disabled');
         prev.removeAttr('disabled');
     }
+    var interval=setInterval(function(){
+        $('#trigger').addClass('triggerNot');
+        setTimeout(function(){
+            $('#trigger').removeClass('triggerNot');
+            clearInterval(interval);
+        },1000)
+    },100)
     
 });
 
@@ -73,6 +80,9 @@ $( function() {
   $( ".selector" ).datepicker({
     dateFormat: "yy-mm-dd"
   });
+
+
+  
 
 
 

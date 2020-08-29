@@ -21,7 +21,7 @@
             <% for (let i of DailyEvent) {%>
                 <% if (i.eventType=="work"){%>
                     <p class="personalInside" style="color:#192b4d">
-                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%><span class="close">&ensp;<a href="/eventdelete/?id=<%= i.id %>"><i class="fas fa-window-close"></i></a></span> &ensp;<br>
+                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%><span class="close">&ensp;<a href="/eventdelete/?id=<%= i.id %>"><i class="fas fa-window-close"></i></a></span>&ensp; &ensp;<br>
                         <%= i.eventName%></p>
 
                    <%}%>
@@ -31,7 +31,7 @@
             <% for (let i of DailyEvent) {%>
                 <% if (i.eventType=="others"){%>
                     <p class="personalInside" style="color:#192b4d">
-                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%><span class="close">&ensp;<a href="/eventdelete/?id=<%= i.id %>"><i class="fas fa-window-close"></i></a></span> &ensp;<br>
+                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%><span class="close">&ensp;<a href="/eventdelete/?id=<%= i.id %>"><i class="fas fa-window-close"></i></a></span>&ensp; &ensp;<br>
                         <%= i.eventName%></p>
 
                    <%}%>
@@ -81,7 +81,7 @@
 
 
 
-<div id="triggerIt">
+<div  id="trigger" class="triggerIt">
     <body>
 		<div class="scene">
 			<i class="fa fa-rocket" aria-hidden="true"></i>
