@@ -1,3 +1,12 @@
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+  $( ".selector" ).datepicker({
+    dateFormat: "yy-mm-dd"
+  });
+
+
 var next=$('#next');
 var prev=$('#prev');
 var divs=$('#left div');
@@ -56,3 +65,19 @@ prev.click(function(e)
     }
     
 })
+
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+  $( ".selector" ).datepicker({
+    dateFormat: "yy-mm-dd"
+  });
+
+
+
+
+
+
+
+  

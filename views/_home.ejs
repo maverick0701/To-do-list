@@ -1,16 +1,50 @@
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/box.css">
 <div id='listbox'>
 
     <div id="left">
-        <div class='personal' style="text-align: center">Personal</div>
-        <div class="work" style="text-align: center">Work</div>
-        <div class="others" style="text-align: center">Others</div>
+        <div class='personal' style="text-align: center;color:#192b4d">Personal
+                <% for (let i of DailyEvent) {%>
+                 <% if (i.eventType=="personal"){%>
+                    <p class="personalInside" style="color:#192b4d">
+                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%> &ensp;<br>
+                        <%= i.eventName%></p>
+
+                    <%}%>
+                    <%}%>
+            
+        </div>
+        <div class="work" style="text-align: center;color:#192b4d">Work
+            <% for (let i of DailyEvent) {%>
+                <% if (i.eventType=="work"){%>
+                    <p class="personalInside" style="color:#192b4d">
+                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%> &ensp;<br>
+                        <%= i.eventName%></p>
+
+                   <%}%>
+                   <%}%>
+        </div>
+        <div class="others" style="text-align: center;color:#192b4d">Others
+            <% for (let i of DailyEvent) {%>
+                <% if (i.eventType=="others"){%>
+                    <p class="personalInside" style="color:#192b4d">
+                        <i class="fas fa-calendar-alt"></i> &ensp;Date:&ensp;<%=i.date%> &ensp;<br>
+                        <%= i.eventName%></p>
+
+                   <%}%>
+                   <%}%>
+        
+        </div>
     </div>
     <div id="right">
+        <form action="/addlist" method="POST">
         <div id="textareaHeader">
             Event Description
         </div>
-        <textarea></textarea>
+        <textarea name="eventDes"></textarea>
     </div>
     <div id="button">
         <button type="submit" id="addEvent">Add Event</button>
@@ -18,8 +52,44 @@
     <div id='changeView'>
         <button type="submit" id="next">Next</button><br><br>
         <button type="submit" id="prev">Previous</button>
+        <div id="date"> 
+            <label for="datepicker" ><i class="fas fa-calendar-alt"></i> &ensp;Date: &ensp;</label><br><br>
+            <input type="text" id="datepicker" name="eventDate" class='selector'>
+        </div>
+        <div id="option">
+            <p>Event Type</p>
+            <select name="evenType">
+                
+                <option value="personal">Personal</option>
+                <option value="work">work</option>
+                <option value="others">others</option>
+            </select>
+        </div>
+        
+    </form>
     </div>
 </div>
-<script src="/js/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="/js/script.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+<div id="triggerIt">
+    <body>
+		<div class="scene">
+			<i class="fa fa-rocket" aria-hidden="true"></i>
+			<span class="cloud cloud1"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+			<span class="cloud cloud2"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+			<span class="cloud cloud3"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+		</div>
+</body>
+
+</div>
+<script type="text/javascript" src="/js/script.js"></script>

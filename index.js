@@ -1,9 +1,12 @@
 const express=require('express');
 const port=8000;
+const db=require('./config/mongoose');
 const app=express();
 const router=require('./router/index');
-const db=require('./config/mongoose');
+
 const expressLayouts=require('express-ejs-layouts');
+const DailyEvents=require('./models/mongoose');//setting up dataBase for events
+app.use(express.urlencoded({extended:true}));
 //midlleware
 
 
@@ -22,6 +25,8 @@ app.use('/',router);
 
 //setting up static files
 app.use(express.static('./assets'));
+
+
 
 
 //listens to the assigned port
